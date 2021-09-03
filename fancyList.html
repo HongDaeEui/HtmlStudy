@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ol {
+        width: 50%;
+        margin-top: auto;
+        margin-left: 30%;
+        counter-reset: li;
+        list-style: none;
+        padding: 0;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      }
+      ol a {
+        position: relative;
+        display: block;
+        padding: 0.4em 0.4em 0.4em 2em;
+        margin: 0.5em 0;
+        background: #dad2ca;
+        color: #444;
+        text-decoration: none;
+        border-radius: 0.3em;
+        transition: 0.3s ease-out;
+      }
+
+      ol a:hover {
+        background: #e9e4e0;
+      }
+      ol a:hover:before {
+        transform: rotate(360deg);
+      }
+      ol a:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        background: #f9dd94;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: 0.3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        transition: all 0.3s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="dl-blurbs">
+      <ol>
+        <li class="">
+          <a href="#">Grilled Flatfish With Pistachio-Herb Sauce</a>
+        </li>
+        <li class="">
+          <a href="#">Coconut Cod Chowder With Seasoned Oyster Crackers</a>
+        </li>
+        <li class="">
+          <a href="#">Tamarind-Glazed Black Bass With Coconut-Herb Salad</a>
+        </li>
+        <li class=""><a href="#">Spicy Sweet-and-Sour Salmon</a></li>
+      </ol>
+    </section>
+  </body>
+</html>
